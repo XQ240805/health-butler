@@ -1,0 +1,48 @@
+page {
+  background: #F7F5EF;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+  color: #2E3A33;
+  font-size: 30rpx;
+  line-height: 1.65;
+}
+
+.container {
+  padding: 32rpx 32rpx 48rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(78, 124, 99, 0.06);
+  margin-bottom: 24rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2E3A33;
+  margin-bottom: 16rpx;
+}
+
+.muted {
+  color: #8A968D;
+  font-size: 26rpx;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4rpx 16rpx;
+  border-radius: 100rpx;
+  background: #EDF3EE;
+  color: #4E7C63;
+  font-size: 22rpx;
+  margin-right: 12rpx;
+}
+
+.divider {
+  height: 1rpx;
+  background: #EEF0EB;
+  margin: 24rpx 0;
+}

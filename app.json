@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/daily/daily",
+    "pages/records/records"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4E7C63",
+    "navigationBarTitleText": "健康养生助手",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F7F5EF"
+  },
+  "tabBar": {
+    "color": "#9AA59C",
+    "selectedColor": "#4E7C63",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "对话" },
+      { "pagePath": "pages/daily/daily", "text": "每日养生" },
+      { "pagePath": "pages/records/records", "text": "记录" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

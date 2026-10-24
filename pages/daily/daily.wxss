@@ -1,0 +1,94 @@
+.hero {
+  background: linear-gradient(150deg, #4E7C63 0%, #6E9A80 100%);
+  border-radius: 28rpx;
+  padding: 40rpx 36rpx;
+  color: #FFFFFF;
+  margin-bottom: 28rpx;
+}
+
+.hero-season {
+  display: inline-block;
+  padding: 4rpx 20rpx;
+  border-radius: 100rpx;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 22rpx;
+  margin-bottom: 16rpx;
+}
+
+.hero-title {
+  font-size: 38rpx;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 12rpx;
+}
+
+.hero .muted {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.row-head {
+  margin-bottom: 14rpx;
+}
+
+.item-text {
+  font-size: 29rpx;
+  line-height: 1.72;
+  color: #33403A;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #F1F3EE;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.check {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #CDD8D0;
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  flex-shrink: 0;
+}
+
+.check-on {
+  background: #4E7C63;
+  border-color: #4E7C63;
+}
+
+.task-text {
+  font-size: 29rpx;
+  color: #33403A;
+}
+
+.task-done .task-text {
+  color: #A6B0A8;
+  text-decoration: line-through;
+}
+
+.btn {
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  background: #EDF3EE;
+  color: #4E7C63;
+  border-radius: 100rpx;
+  font-size: 29rpx;
+}
+
+.foot {
+  font-size: 22rpx;
+  color: #A6B0A8;
+  line-height: 1.7;
+  padding: 8rpx 12rpx 20rpx;
+}

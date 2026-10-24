@@ -1,0 +1,54 @@
+<view class="chat-page">
+  <view class="topbar">
+    <view class="avatar">管</view>
+    <view class="toptext">
+      <view class="name">健康管家</view>
+      <view class="status">在线 · 只给生活建议，不做诊断</view>
+    </view>
+  </view>
+
+  <scroll-view class="chat-list" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation>
+    <view
+      wx:for="{{messages}}"
+      wx:key="index"
+      class="row {{item.role === 'user' ? 'row-user' : 'row-butler'}}"
+    >
+      <view class="bubble {{item.role === 'user' ? 'bubble-user' : 'bubble-butler'}}">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{thinking}}" class="row row-butler">
+      <view class="bubble bubble-butler typing">
+        <view class="dot"></view><view class="dot"></view><view class="dot"></view>
+      </view>
+    </view>
+
+    <view class="quick-wrap">
+      <view class="quick-title">常见问题</view>
+      <view class="quick-row">
+        <view
+          wx:for="{{quick}}"
+          wx:key="index"
+          class="chip"
+          data-text="{{item}}"
+          bindtap="onQuick"
+        >{{item}}</view>
+      </view>
+    </view>
+
+    <view id="bottom" class="bottom-holder"></view>
+  </scroll-view>
+
+  <view class="input-bar">
+    <input
+      class="input"
+      value="{{input}}"
+      placeholder="说说你最近的情况"
+      confirm-type="send"
+      bindinput="onInput"
+      bindconfirm="onSend"
+    />
+    <view class="send {{input ? 'send-active' : ''}}" bindtap="onSend">发送</view>
+  </view>
+</view>

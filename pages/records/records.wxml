@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">今天的状态</view>
+    <view class="field">
+      <view class="label">睡眠</view>
+      <input class="num" type="digit" value="{{form.sleep}}" data-field="sleep" bindinput="onField" placeholder="小时，如 7.5" />
+    </view>
+    <view class="field">
+      <view class="label">饮水</view>
+      <input class="num" type="number" value="{{form.water}}" data-field="water" bindinput="onField" placeholder="杯数，如 6" />
+    </view>
+    <view class="field">
+      <view class="label">步数</view>
+      <input class="num" type="number" value="{{form.steps}}" data-field="steps" bindinput="onField" placeholder="如 6500" />
+    </view>
+
+    <view class="save" bindtap="save">保存</view>
+    <view wx:if="{{tip}}" class="tip">{{tip}}</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">最近 7 天</view>
+    <view wx:if="{{!hasData}}" class="muted" style="padding: 20rpx 0;">还没有记录。记三天，就能看出作息上的规律。</view>
+
+    <view wx:for="{{list}}" wx:key="label" class="day">
+      <view class="day-head">
+        <text class="day-label {{item.isToday ? 'today' : ''}}">{{item.label}}</text>
+        <text class="muted">睡 {{item.sleep}}h · 水 {{item.water}}杯 · {{item.steps}}步</text>
+      </view>
+      <view class="bar-bg">
+        <view class="bar" style="width: {{item.sleepPct}}%"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="foot">记录只保存在本机。需要云端同步时，配上小程序 AppID 和云开发环境即可。</view>
+</view>
